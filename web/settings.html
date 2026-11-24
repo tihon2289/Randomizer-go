@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#111318">
+    <link rel="icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/settings.js" type="module"></script>
+    <title>Настройки · Рандомайзер</title>
+  </head>
+  <body>
+    <main class="app">
+      <header class="masthead">
+        <a class="icon-button" href="/" aria-label="К розыгрышу" title="К розыгрышу"><span aria-hidden="true">←</span></a>
+        <h1>Настройки</h1>
+      </header>
+
+      <form id="settings" class="settings" novalidate>
+        <div class="field">
+          <div class="field-heading">
+            <label for="pool">Список чисел</label>
+          </div>
+          <textarea id="pool" rows="3" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Например, 1, 2, 3, 4" aria-describedby="pool-hint pool-error"></textarea>
+          <p id="pool-hint" class="hint">Целые числа через запятую, пробел или с новой строки.</p>
+          <p id="pool-error" class="error" hidden></p>
+        </div>
+
+        <div class="field">
+          <div class="field-heading">
+            <label for="queue">Заданные результаты</label>
+            <span id="queue-count" class="field-count" aria-live="polite"></span>
+          </div>
+          <textarea id="queue" rows="3" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Например, 7, 3, 9" aria-describedby="queue-hint queue-error"></textarea>
+          <p id="queue-hint" class="hint">Необязательно. Эти числа выпадут по порядку, затем начнётся случайный выбор из списка.</p>
+          <p id="queue-error" class="error" hidden></p>
+          <button id="restart" class="restart-button" type="button" hidden>Начать очередь заново</button>
+        </div>
+
+        <p id="settings-error" class="error" role="alert" hidden></p>
+        <button id="save" class="primary-button" type="submit" disabled>Сохранить и вернуться</button>
+      </form>
+      <noscript><p class="error">Для изменения настроек включи JavaScript.</p></noscript>
+    </main>
+  </body>
+</html>

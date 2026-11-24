@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#111318">
+    <meta name="description" content="Рандомайзер чисел из списка.">
+    <link rel="icon" href="/assets/icon.png">
+    <link rel="apple-touch-icon" href="/assets/icon.png">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/draw.js" type="module"></script>
+    <title>Рандомайзер</title>
+  </head>
+  <body>
+    <main class="app draw-page">
+      <header class="masthead">
+        <img class="app-icon" src="/assets/icon.png" width="46" height="46" alt="">
+        <h1>Рандомайзер</h1>
+        <a class="icon-button" href="/settings" aria-label="Настройки" title="Настройки"><span aria-hidden="true">⚙</span></a>
+      </header>
+
+      <section class="result" aria-labelledby="result-title">
+        <h2 id="result-title">Результат</h2>
+        <div class="dial" aria-hidden="true">
+          <div class="dial-ticks"></div>
+          <div class="dial-ring"></div>
+          <div class="dial-core"></div>
+          <span class="dial-marker"></span>
+          <span id="number" class="number">—</span>
+        </div>
+        <p class="result-status" role="status">
+          <span id="result-announcement" class="sr-only"></span>
+          <span id="result-message">Ожидает запуска</span>
+        </p>
+      </section>
+
+      <div class="draw-controls">
+        <p id="draw-error" class="error" role="alert" hidden></p>
+        <button id="draw" class="primary-button" type="button" disabled>
+          <span class="draw-symbol" aria-hidden="true"></span>
+          <span id="draw-label">Выбрать число</span>
+        </button>
+        <noscript><p class="error">Для выбора чисел включи JavaScript.</p></noscript>
+      </div>
+    </main>
+  </body>
+</html>
